@@ -1,0 +1,99 @@
+/*
+Media Query Exercises
+
+1. Change the background colour of the <body> element 
+at the following device-width breakpoints:
+
+The default background colour: black;
+
+550 pixels and higher - blue;
+
+600 pixels and higher - yellow;
+
+650 pixels and higher - green;
+
+700 pixels and higher - pink;
+
+
+
+2. We have a <h1> element that is hidden by default.
+
+Make the <h1> appear when the screen width is between 900 and 950 pixels.
+
+3. We have 4 columns. Each of them span 100% of the viewport width.
+
+On screens that a larger than 768px, make each column span 50% of the width of the viewport.
+
+On screens that a larger than 990px, make each column span 25% of the width of the viewport.
+
+*/
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    display: none;
+  }
+  
+  .col {
+    float: left;
+    width: 100%;
+    padding: 2rem;
+    margin: 0.5rem 0;
+    background-color: orange;
+    text-align: center;
+    outline: 3px solid #868686;
+  }
+  
+  .row:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  @media screen and (min-width: 550px) {
+    body {
+      background-color: blue;
+    }
+  }
+  
+  @media screen and (min-width: 600px) {
+    body {
+      background-color: yellow;
+    }
+  }
+  
+  @media screen and (min-width: 650px) {
+    body {
+      background-color: green;
+    }
+  }
+  
+  @media screen and (min-width: 700px) {
+    body {
+      background-color: pink;
+    }
+  }
+  
+  @media screen and (min-width: 900px) and (max-width: 950px) {
+    h1 {
+      display: block;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .col {
+      width: 50%;
+    }
+  }
+  
+  @media screen and (min-width: 990px) {
+    .col {
+      width: 25%;
+    }
+  }
+  
