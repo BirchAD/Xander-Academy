@@ -23,7 +23,6 @@ body {
     text-decoration: none; 
 }
 
-
   h1 {
     color:rgb(145, 232, 162);
     padding: 0;
@@ -60,5 +59,41 @@ body {
     height: 250px;
   }
 
+  .navbar {
+    background-color: #333;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
   
+  .navbar-ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin-right: 10px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    display: flex;
+  }  
+
+  @media screen and (min-width: 750px) {
+    .navbar-ul {
+      flex-basis: auto;
+      text-align: left;
+      margin-right: auto;
+    }
+  }
   
