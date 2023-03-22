@@ -147,7 +147,8 @@ footer {
 
 #projects h4 {
   font-size: 1rem;
-  margin: 2rem 0;
+  font-family: var(--mono);
+  margin: 0;
 }
 
 .black-box {
@@ -157,6 +158,7 @@ footer {
   color: var(--white);
   font-size: 1rem;
   line-height: 1.5;
+  margin-bottom: 1.5rem;
 }
 
 #projects ul {
@@ -177,4 +179,65 @@ footer {
   border-left: 1px solid var(--aqua);
   border-radius: 14px;
   width: 100%;
+}
+
+
+#projects article {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 1rem;
+}
+
+.text {
+  order: 2;
+  text-align: right;
+}
+
+#projects ul {
+  justify-content: flex-end;
+}
+
+.image {
+  grid-column: 1 / 7;
+}
+
+.text {
+  grid-column: 5 / 11;
+}
+
+.image,
+.text {
+  grid-row: 1 / 2;
+}
+
+@media screen and (min-width: 550px) {
+  /* Turn our article into a CSS grid */
+
+  #projects article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+  }
+
+  .text {
+    order: 2;
+    text-align: right;
+  }
+
+  #projects ul {
+    justify-content: flex-end;
+  }
+
+  .image {
+    grid-column: 1 / 7;
+  }
+
+  .text {
+    grid-column: 5 / 11;
+  }
+
+  .image,
+  .text {
+    grid-row: 1 / 2;
+  }
 }
