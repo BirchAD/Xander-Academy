@@ -45,7 +45,7 @@ body {
     margin: 5px;
   }
   
-  footer {
+  #contact {
     background-color: rgb(145, 232, 162);
     color: rgb(15, 20, 15);
     text-align: center;
@@ -108,4 +108,14 @@ body {
       margin-right: auto;
     }
   }
-  
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:black;
+    color: white;
+    text-align: center;
+  }
+
