@@ -5,6 +5,19 @@ html {
     box-sizing: inherit;
   }
 
+:root {
+  --black: #171321;
+  --dkblue: #0d314b;
+  --plum: #4b0d49;
+  --hotmag: #ff17e4;
+  --magenta: #e310cb;
+  --aqua: #86fbfb;
+  --white: #f7f8fa;
+  --font-size: 1.3rem;
+  --mono: "Oxygen mono", monospace;
+  --sans: Oxygen, sans-serif;
+}
+
 body {
     background-color: black;
     color: white;
@@ -13,9 +26,6 @@ body {
     line-height: 1.5;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
   }
 
@@ -32,8 +42,8 @@ body {
 
   .container {
     max-width: 600px;
+    margin: 0 auto;
     padding: 40px;
-    margin-bottom: 200px;
   }
   
   h2 {
@@ -49,24 +59,15 @@ body {
     background-color: rgb(145, 232, 162);
     color: rgb(15, 20, 15);
     text-align: center;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     padding: 20px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
     width: 100%;
     height: 250px;
   }
 
   .navbar {
     background-color: #333;
-    height: 50px;
-    position: fixed;
-    top: 0;
     width: 100%;
-    margin: 0;
-    padding: 0;
   }
   
   .navbar-ul {
@@ -77,7 +78,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    padding: 0;
+    padding: 2rem;
   }
   
   .nav-item {
@@ -110,13 +111,11 @@ body {
   }
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
     background-color:black;
     color: white;
     text-align: center;
+    height: 50px;
   }
 
   .gradient {
@@ -128,3 +127,117 @@ footer {
     height: 2px;
   }
 
+.dk-blue {
+  background-color: var(--dkblue);
+}
+
+#projects {
+  padding: 4rem 1rem;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: calc(2.5rem * 1.5);
+}
+
+#projects h3 {
+  color: var(--aqua);
+  margin-bottom: calc(1.5rem * 1.5);
+}
+
+#projects h4 {
+  font-size: 1rem;
+  font-family: var(--mono);
+  margin: 0;
+}
+
+.black-box {
+  background-color: var(--black);
+  border-radius: 7px;
+  padding: 1rem;
+  color: var(--white);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+#projects ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+#projects img {
+  margin: 2rem 0 4rem 0;
+  padding: 0.2rem;
+  border-top: 1px solid var(--aqua);
+  border-left: 1px solid var(--aqua);
+  border-radius: 14px;
+  width: 100%;
+}
+
+
+#projects article {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 1rem;
+}
+
+.text {
+  order: 2;
+  text-align: right;
+}
+
+#projects ul {
+  justify-content: flex-end;
+}
+
+.image {
+  grid-column: 1 / 7;
+}
+
+.text {
+  grid-column: 5 / 11;
+}
+
+.image,
+.text {
+  grid-row: 1 / 2;
+}
+
+@media screen and (min-width: 550px) {
+  /* Turn our article into a CSS grid */
+
+  #projects article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+  }
+
+  .text {
+    order: 2;
+    text-align: right;
+  }
+
+  #projects ul {
+    justify-content: flex-end;
+  }
+
+  .image {
+    grid-column: 1 / 7;
+  }
+
+  .text {
+    grid-column: 5 / 11;
+  }
+
+  .image,
+  .text {
+    grid-row: 1 / 2;
+  }
+}
